@@ -1,9 +1,12 @@
 from django.shortcuts import render
-import django
+from django.http import HttpResponse
 
 # Create your views here.
 
 
 def welcome_page(request):
-    user = 'John Doe'
-    return django.http.HttpResponse(f'Welcome, {user}! this is django')
+    return HttpResponse(f'Welcome to django')
+
+
+def about_page(request):
+    return HttpResponse('about page')
