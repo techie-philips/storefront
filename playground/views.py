@@ -5,8 +5,9 @@ from django.http import HttpResponse
 
 
 def welcome_page(request):
-    return HttpResponse(f'Welcome to django')
+	message = "Welcome to Django"
+	return render(request, 'home.html', context={'message': message})
 
 
 def about_page(request):
-    return HttpResponse('about page')
+	return HttpResponse('about page')
